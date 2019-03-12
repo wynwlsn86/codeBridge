@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans" rel="stylesheet">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			color: black;
+		}
+		header{
+			width: 100%;
+			position: fixed;
+		}
+		body{
+			background-color: black;			
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			animation: pics 20s ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		/*Header CSS*/
+		.head{
+			display: flex;
+			background-color: black;
+			width: 100%;
+			height: 50px;
+		}
+		.hChild{
+			background-color: grey;
+			border: solid black;
+			color: white;
+			border-width: 10px;
+			width: 300px;
+			height: 20px;
+			flex: 1;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 20px;
+			animation: pulse 2s ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		.button{
+			cursor: pointer;
+		}
+		@keyframes pulse{
+			0%{
+				font-weight: normal;
+			}
+			20%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			40%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			50%{
+				font-weight: bolder;
+				font-size: 22px;
+			}
+			60%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			80%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			100%{
+				font-weight: normal;
+			}
+		}
+		/*end Header CSS*/
+
+		/*Sides CSS*/
+		.body{
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			display: flex;
+		}
+		.bChild{
+			background-color: black;
+			color: white;
+			border: white solid 5px;
+			padding: 10px;
+			height: 800px;
+			width: 30%;
+			border: black solid;
+			flex: 1;
+			padding-top: 100px;
+			padding-left: 20px;
+		}
+		.awards{
+			text-decoration: underline;
+		}
+		#side{
+			flex: 1;
+			border: white solid 1px;
+			margin-top: 20px;
+		}
+		#center{
+			flex: 5;
+			background: url("images/title2.png");
+			background-color: black;
+			background-position: center center;
+			object-fit: cover;
+			background-repeat: no-repeat;
+			padding: 10px;
+			margin-top: 40px;
+			border: none;
+			height: 200px;
+			width: 70%;
+			border: white solid 1px;
+		}
+		/*Sides CSS Ends*/
+
+		@keyframes pics{
+			0%{
+				background: url("images/cover.jpg");
+				background-position: center center;
+				background-size: cover;
+			}
+			25%{
+				background: url("images/dance.jpg");
+			}
+			50%{
+				background: url("images/milkeshake.jpg");
+				background-position: center center;
+			}
+			75%{
+				background: url("images/ring.jpg");
+			}
+			100%{
+				background: url("images/closeUpGuns.jpg");
+				background-position: center center;
+			}
+		}
+		h3{
+			font-family: 'PT Sans', sans-serif;
+			font-weight: bold;
+		}
+		/*Footer CSS*/
+		footer{
+			background-color: grey;
+			border: black solid 1px;
+			width: 100%;
+			height: 20px;
+			color: white;
+			text-align: center;
+			padding: 5px;
+		}
+		.news{
+			font-family: 'News Cycle', sans-serif;
+		}
+		/*Ender Footer CSS*/
+	</style>
+
+</head>
+<body>
+	<header>
+		<div class="head">
+			<div class="hChild">
+				<a href="index.html"> 
+					<h3 class="button">Home</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="pages/synopsys.html"> 
+					<h3 class="button">Synopsis</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="pages/cast.html">
+					<h3 class="button">Cast</h3>
+				</a>
+			</div>	
+			<div class="hChild">
+				<a href="pages/trailer.html"> 
+					<h3 class="button">Trailer</h3>
+				</a>
+			</div>		
+		</div>
+	</header>
+	<div class="body">
+		<div class="bChild" id="side">
+			<!-- Left Column -->
+				<br>
+				<h1 class="awards">Reviews</h1>
+				<br>
+				<br>
+				<h4 class="news">"It's full of perfect Tarantino moments, with meta references, B-movie sleaze and a sheer sense of fun."</h4>
+				<br>
+				Kate Muir (Times)
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h4 class="news">"Much imitated and never surpassed, Quentin Tarantino's sprawling, galling crime compendium remains a pinnacle of pop-culture perfection."</h4>
+				<br>
+				Leigh Paatsch 
+				<br>
+				(Herald Sun)
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h4 class="news">"It's hot, it's cool and -- for a movie that sometimes comes at you like a blindsiding fist -- it's unfailingly playful."</h4>
+				<br>
+				Jay Carr
+				<br>
+				Boston Globe
+		</div>
+		<div class="bChild" id="center"></div>
+		<div class="bChild"	id="side">
+			<!-- Right Column -->
+			<h1 class="awards">Awards</h1>
+			<br>
+			<br>
+			<ul>
+				<li>
+					<h3 class="awards">Best Film</h3>
+					-
+					<br>
+					<h4 class="news">Quentin Tarantino</h4>
+				</li>
+					<br>
+					<br>
+					<h3 class="awards">Best Original Screen Play </h3>
+					 - 
+					<br>
+					<h4 class="news">Quentin Tarantino and Roger Avary</h4>
+				</li>
+					<br>
+					<br>
+				<li>
+					<h3 class="awards">Best Director</h3>
+					-
+					<br>
+					<h4 class="news">Quentin Tarantino</h4>
+					<br>
+					<br>
+				</li>
+				<li>
+					<h3 class="awards">Best Supporting Actor</h3>
+					- 
+					<br>
+					<h4 class="news">Samuel L. Jackson</h4>
+			</li>
+					<br>
+					<br>
+				<li>
+					<h3 class="awards">Cannes Palme d'OR</h3>
+					- 
+					<br>
+					<h4 class="news">Quentin Tarantino</h4>
+			</li>
+			<br>
+			<br>
+			<br>
+			<li>
+				<h3 class="awards">AFI's 100 Years ... 100 Movies</h3>
+				-
+				<br>
+				<h4 class="news">Number 95</h4>
+			</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		Designed by Wayne Wilson, 2019
+	</footer>
+</body>
+</html>

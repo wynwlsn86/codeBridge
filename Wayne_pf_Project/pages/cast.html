@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			color: black;
+		}
+		header{
+			width: 100%;
+			position: fixed;
+		}
+		body{
+			background-image: url("../images/tablepic.jpg");
+			background-attachment: fixed;
+
+		}
+		.head{
+			display: flex;
+			background-color: black;
+			width: 100%;
+			height: 50px;
+		}
+		.hChild{
+			background-color: grey;
+			border: solid black;
+			color: white;
+			border-width: 10px;
+			width: 300px;
+			height: 20px;
+			flex: 1;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 20px;
+			animation: pulse 2s ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		@keyframes pulse{
+			0%{
+				font-weight: normal;
+			}
+			20%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			40%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			50%{
+				font-weight: bolder;
+				font-size: 22px;
+			}
+			60%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			80%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			100%{
+				font-weight: normal;
+			}
+		}
+		table{
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			padding-top: 200px;
+			margin: 0px 100px 0px 100px;
+		}
+		tr{
+			border: white 4px;
+			background-color: black;
+			color: white;
+		}
+		td{
+			border: white 4px;
+			margin: 0;
+			padding: 15px;
+			background-color: black;
+			color: white;
+		}
+		.center{
+			text-align: center;
+			text-decoration: underline;
+		}
+		footer{
+			background-color: grey;
+			border: black solid 1px;
+			width: 100%;
+			height: 20px;
+			color: white;
+			text-align: center;
+			padding: 5px;
+		}
+		h4{
+			font-family: 'PT Sans', sans-serif;
+		}
+		h3{
+			font-family: 'PT Sans', sans-serif;
+			font-weight: bold;
+		}
+		/*Modal CSS*/
+		.modalShadow{
+  			width: 100%;
+  			height: 100%;
+ 			background-color: rgba(0, 0, 0, 0.5);
+  			position: fixed;
+ 			top: 0;
+ 			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+		.modalContent{
+ 			width: 500px;
+ 			height: 100px;
+ 			background-color: orange;
+ 			border-radius: 4px;
+ 			text-align: center;
+  			padding: 20px;
+  			position: relative;
+		}
+		.exit{
+			transform: rotate(45deg);
+			cursor: pointer;
+			position: absolute;
+			font-size: 30px;
+			right: 10px;
+			top: 0;
+		}
+		.submit{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<!-- Header -->
+		<div class="head">
+			<div class="hChild">
+				<a href="../index.html"> 
+					Home
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="synopsys.html"> 
+					Synopsis
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="cast.html">
+					Cast
+				</a>
+			</div>	
+			<div class="hChild">
+				<a href="trailer.html"> Trailer
+				</a>
+			</div>		
+		</div>
+	</header>
+	<table>
+		<div class="table">
+			<!-- 2 Column Table Actors/Character -->
+			<tr>
+				<td class="center">
+					<h1>Actor</h1>
+				</td>
+				<td class="center">
+					<h1>Character and Summary</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Samuel L. Jackson</h3>
+				</td>
+				<td>
+					<h3>Jules Winnfield:<h3>
+					<h4>A criminal working for Wallace and Vincent's partner. Tarantino wrote the part of Jules with Jackson in mind, but his first audition was overshadowed by Paul Calderón; Jackson had assumed the audition was merely a reading. Weinstein convinced him to audition a second time, and his performance of the final diner scene won over Tarantino. Jules was originally scripted with a giant afro, but Tarantino and Jackson agreed on the Jheri-curled wig seen in the film; one reviewer took it as a "tacit comic statement about the ghettoization of blacks in movies". Jackson received an Oscar nomination for Best Supporting Actor. Calderón appears in the movie as Paul, a bartender at Marsellus' social club, as well as Marsellus' assistant.</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>John Travolta</h3>
+				</td>
+				<td>
+					<h3>Vincent Vega:</h3>
+					<h4>A criminal working for Marsellus Wallace and Jules' partner. Tarantino cast Travolta in Pulp Fiction because Michael Madsen, who had played Vic Vega in Reservoir Dogs, chose to appear in Kevin Costner's Wyatt Earp instead. Madsen has since expressed regret over his decision. Harvey Weinstein pushed for Daniel Day-Lewis in the part. Travolta accepted a reduced rate – sources claim either US$100,000 or US$140,000 – but the film's success and his Academy Award nomination for Best Actor revitalized his career. In 2004, Tarantino discussed an idea for a movie starring Travolta and Madsen as the "Vega Brothers"; the concept remains unrealized.</h4>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Uma Thurman</h3>
+				</td>
+				<td>
+					<h3>Mia Wallace:</h3>
+					<h4>Wallace's wife and an aspiring actress. Miramax favored Holly Hunter or Meg Ryan for the role of Mia. Alfre Woodard and Meg Tilly were also considered, but Tarantino wanted Thurman after their first meeting. She dominated the film's promotional material, appearing on a bed with cigarette in hand. She was nominated for an Oscar for Best Supporting Actress. Despite being launched into the celebrity A-list, Thurman chose not to do any big-budget films for the following three years. Thurman later starred in Tarantino's two Kill Bill movies (2003, 2004).</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Harvey Keitel</h3>
+				</td>
+				<td>
+					<h3>Winston Wolfe:</h3>
+					<h4>A mysterious and intimidating cleaner who aids Jules and Vincent. Tarantino wrote the part of Wolfe specifically for Keitel, who had starred in Reservoir Dogs and was instrumental in its production. In Tarantino's words, "Harvey had been my favorite actor since I was 16 years old." Keitel had played a character similarly employed as a "cleaner" in Point of No Return (1993).</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Tim Roth</h3>
+				</td>
+				<td>
+					<h3>Ringo/"Pumpkin":</h3>
+					<h4>A burglar and Yolanda's boyfriend. Roth had starred in Reservoir Dogs alongside Keitel. He had used an American accent in Reservoir Dogs, but uses his natural, London accent in Pulp Fiction. Though Tarantino had written the part with Roth in mind, TriStar head Mike Medavoy preferred Johnny Depp or Christian Slater. Early in development, Tarantino had contemplated casting Roth as Vincent and Gary Oldman as Jules, rewriting the characters as "two English guys".</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Amanda Plummer</h3>
+				</td>
+				<td>
+					<h3>Ringo/"Pumpkin":</h3>
+					<h4>A burglar and Yolanda's boyfriend. Roth had starred in Reservoir Dogs alongside Keitel. He had used an American accent in Reservoir Dogs, but uses his natural, London accent in Pulp Fiction. Though Tarantino had written the part with Roth in mind, TriStar head Mike Medavoy preferred Johnny Depp or Christian Slater. Early in development, Tarantino had contemplated casting Roth as Vincent and Gary Oldman as Jules, rewriting the characters as "two English guys".</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Maria de Medeiros</h3>
+				</td>
+				<td>
+					<h3>Fabienne:</h3>
+					<h4>Butch's girlfriend. Tarantino met de Medeiros, a Portuguese actress, while traveling with Reservoir Dogs around the European film festival circuit. De Medeiros had also previously worked with fellow cast member Uma Thurman on the 1990 film Henry & June.</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Ving Rhames</h3>
+				</td>
+				<td>
+					<h3>Marsellus Wallace:</h3>
+					<h4>A violent crime boss and employer of Jules and Vincent. Before Rhames was cast, the part of Wallace was offered to Sid Haig, but Haig passed on the role. According to Bender, Rhames gave "one of the best auditions I've ever seen". His acclaimed performance led to his being cast in big-budget features such as Mission Impossible (1996), Con Air (1997), and Out of Sight (1998).</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Eric Stoltz</h3>
+				</td>
+				<td>
+					<h3>Lance:</h3>
+					<h4>Vincent's drug dealer. Courtney Love later said that Kurt Cobain was originally offered the role of Lance; if he had taken it, Love would have played the role of his wife. Tarantino denies that he ever met Cobain and insists he never offered him a role in the movie. Gary Oldman was the preferred choice among TriStar executives, based on his portrayal of drug-dealing pimp Drexl Spivey in True Romance (1993).</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Rosanna Arquette</h3>
+				</td>
+				<td>
+					<h3>Jody:</h3>
+					<h4>Lance's wife. Pam Grier read for the role, but Tarantino did not believe audiences would find it plausible for Lance to yell at her. Tarantino later cast Grier as the lead role for Jackie Brown. Ellen DeGeneres also read for Jody. Rosanna's brother Robert (later Alexis) also appears in the film as an unnamed character who emerges from a bathroom to shoot at Vincent and Jules; however he misses every shot and is subsequently executed by the duo. Patricia Arquette, Rosanna's sister, appeared in True Romance.</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Christopher Walken</h3>
+				</td>
+				<td>
+					<h3>Captain Koons:</h3>
+					<h4>A USAF veteran of the Vietnam War who delivers a young Butch his father's coveted gold watch. During Koons' lengthy monologue, he makes mention of a soldier called "Winocki". Joe Winocki is the name of a character in the 1943 film Air Force directed by Howard Hawks, one of Tarantino's personal favorite directors. Walken had also appeared in True Romance.</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Bruce Willis</h3>
+				</td>
+				<td>
+					<h3>Butch Coolidge:</h3>
+					<h4>An aging boxer, who is on the run from Marsellus after agreeing to throw a fight in exchange for payment, before deceiving him and escaping with the money. Willis was a major star, but most of his recent films had been critical and box office disappointments. As described by Peter Bart, taking a role in the modestly budgeted film "meant lowering his salary and risking his star status, but the strategy ... paid off royally: Pulp Fiction not only brought Willis new respect as an actor, but also earned him several million dollars as a result of his gross participation." Willis' appearance and physical presence were crucial to Tarantino's interest in casting him: "Bruce has the look of a 50s actor. I can't think of any other star that has that look." Chandler Lindauer plays a young Butch.</h4>
+				</td>
+			</tr>
+		</div>
+	</table>
+<!-- Footer -->
+	<footer>
+		Designed by Wayne Wilson, 2019
+	</footer>
+	<!-- Modal -->
+	<div class="modalShadow">
+    	<div class="modalContent">
+    		<div class="exit">+</div>
+       		Enter your E-Mail for all the latest news and updates on your favorite
+       		<br>
+       		Pulp Fiction actors!
+       		<br>
+       		<br>
+       		<form action="">
+         	<input type="text" placeholder="E-Mail">
+         	<input type="submit" class="submit">
+
+    </div>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

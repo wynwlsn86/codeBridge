@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Races SC2</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+	<div class="mainRaces">
+		<header class="head" id="head"><a href="https://starcraft2.com/en-us/">
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Inconsolata:700|Share+Tech+Mono|Source+Code+Pro:700|VT323" rel="stylesheet">
+			<video autoplay muted loop id="logo">
+  			<source src="../media/logo.mp4" type="video/mp4">
+			</video>
+		</a></header>
+		<nav class="nav" id="nav">
+			<ul>
+				<a href="news.html"><li><h1>News</h1></li></a>
+				<a href="../index.html"></href><li><h1>Cinematic</h1></li></a>
+					<a href="races.html"><li class="dropdDown"><h1>Races</h1>
+						<ul>
+							<a href="../pages/terran.html"><li class="sub">Terran</li></a>
+							<a href="../pages/zerg.html"><li class="sub">Zerg</li></a>
+							<a href="../pages/protoss.html"><li class="sub">Protoss</li></a>
+						</ul>
+					</li></a>
+				<a href="about.html"><li><h1>About</h1></li></a>
+			</ul>
+		</nav>
+		<div class="content">
+			<img src="../media/sc2Logo.png" alt="Starcraft2 Logo" id="sc2Logo" onload="sc2Phase()">
+		<div class="slideShow" id="rIcons">
+			<h1><span  id="raceHeading">Chose Your Race</span></h1>
+		<div id="imageArray">
+			<button class="buttonP" id="previous" 	onclick="changeRace(-1)">
+					Previous
+			</button>
+				<a href="zerg.html"><img class="icons" src="../media/zergIcon.png" /></a>
+				<a href="terran.html"><img class="icons" src="../media/terranIcon.png" /></a>
+				<a href="protoss.html"><img class="icons" src="../media/protossIcon.png"  /></a>
+				<button class="buttonN" id="next" onclick="changeRace(1)">
+					Next
+				</button>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
+		<div class="foot1">
+			<a href="https://www.blizzard.com/en-us/"><img src="../media/blizzard.png" class="blizzard"></a>
+		</div>
+		<footer class="foot">
+			<br>
+			©2019 BLIZZARD ENTERTAINMENT, 		INC. ALL RIGHTS RESERVED.
+			<br />
+			All trademarks referenced herein are the properties of their respective owners.</footer>
+	</div>
+
+
+</body>
+
+
+
+
+<script src="../js/main.js"></script>
+</html>

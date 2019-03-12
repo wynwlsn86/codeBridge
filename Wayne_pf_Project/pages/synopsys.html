@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			color: black;
+		}
+		header{
+			width: 100%;
+			position: fixed;
+		}
+		body{
+			background-color: black;
+			background: black
+			background-position: center center;
+			background-position: fixed;
+			background-size: 1500px 800px;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		/*Header CSS*/
+		.head{
+			display: flex;
+			background-color: black;
+			width: 100%;
+			height: 50px;
+		}
+		.hChild{
+			background-color: grey;
+			border: solid black;
+			color: white;
+			border-width: 10px;
+			width: 300px;
+			height: 15px;
+			flex: 1;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 20px;
+			animation: pulse 2s ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		@keyframes pulse{
+			0%{
+				font-weight: normal;
+			}
+			20%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			40%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			50%{
+				font-weight: bolder;
+				font-size: 22px;
+			}
+			60%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			80%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			100%{
+				font-weight: normal;
+			}
+		}
+		/*Header CSS Ends*/
+
+		.body{
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-content: center;
+			background-attachment: fixed;
+		}
+		.bChild{
+			background-color: black;
+			color: grey;
+			border: white solid 1px;
+			font-size: 15pt;
+			font-family: 'PT Sans', sans-serif;
+			text-align: left;
+			padding: 10px;
+			border: white solid 1px;
+			height: 200px;
+			border: black solid;
+			flex: 1;
+			align-content: center;
+		}
+		#top{
+			margin-top: 150px;
+		}
+		footer{
+			background-color: grey;
+			border: black solid 1px;
+			width: 100%;
+			height: 20px;
+			color: white;
+			text-align: center;
+			padding: 5px;
+		}
+		/*Paralax Effect 3 imgs*/
+		.paralax{
+			background: url("../images/shorts.jpg")fixed;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-position: fixed;
+			background-size: 100vw;
+		}
+		.paraOut{
+			padding: 100px;
+		}
+		.paralax2{
+			background: url("../images/milkeshake.jpg")fixed;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-position: fixed;
+			background-size: 100vw;
+		}
+		.paralax3{
+			background: url("../images/ring.jpg")fixed;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-position: fixed;
+			background-size: 100vw;
+		}
+		/*Paralax Ends*/
+
+		h1{
+			text-decoration: underline;
+
+		}
+		h3{
+			font-family: 'PT Sans', sans-serif;
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<!-- Header -->
+		<div class="head">
+			<div class="hChild">
+				<a href="../index.html"> 
+					<h3 class="button">Home</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="synopsys.html"> 
+					<h3 class="button">Synopsis</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="cast.html">
+					<h3 class="button">Cast</h3>
+				</a>
+			</div>	
+			<div class="hChild">
+				<a href="trailer.html"> 
+					<h3 class="button">Trailer</h3>
+				</a>
+			</div>		
+		</div>
+	</header>
+	<div class="body">
+		<!-- Plot Summary -->
+		<div class="paralax">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 1:</h1>
+			<br>
+			<p>Hitmen Jules Winnfield and Vincent Vega arrive at an apartment to retrieve a briefcase for their boss, gangster Marsellus Wallace, from an associate, Brett. After Vincent checks the contents of the briefcase, Jules shoots one of Brett's associates, then declaims a passage from the Bible before he and Vincent kill Brett for trying to double-cross Marsellus. They take the briefcase to Marsellus, but have to wait while he bribes champion boxer Butch Coolidge to take a dive in his upcoming match.</p>
+		</div>
+		<div class="paralax">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 2:</h1>
+			<br>
+			<p>
+			The next day, Vincent purchases heroin from his drug dealer, Lance. He shoots up, then drives to meet Marsellus's wife Mia, whom he agrees to escort while Marsellus is out of town. They eat at a 1950s-themed restaurant and participate in a twist contest, then return home with the trophy. While Vincent is in the bathroom, Mia finds his heroin, mistakes it for cocaine, snorts it, and overdoses. Vincent rushes her to Lance's house, where they revive her with an adrenaline shot to her heart.</p>
+		</div>
+		<div class="paralax2">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 3:</h1>
+			<br>
+			<p>
+				Butch double-crosses Marsellus and wins the bout, accidentally killing his opponent. At the motel where he and his girlfriend Fabienne are lying low and preparing to flee, Butch discovers she has forgotten to pack his father's gold watch, a beloved heirloom, and flies into a rage. Returning to his apartment to retrieve the watch, he notices a gun on the kitchen counter and hears the toilet flush. Vincent exits the bathroom and Butch shoots him dead.
+		</div>
+		<div class="paralax2">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 4:</h1>
+			<br>
+			<p>
+				As Butch waits at a traffic light in his car, Marsellus spots him by chance and chases him into a pawnshop. The owner, Maynard, captures them at gunpoint and ties them up in the basement. Maynard is joined by Zed, a security guard; they take Marsellus to another room to rape him, leaving the "gimp", a silent figure in a bondage suit, to watch Butch. Butch breaks loose and knocks out the gimp. He is about to flee but decides to save Marsellus, returning with a katana from the pawnshop. He kills Maynard; Marsellus retrieves Maynard's shotgun and shoots Zed. Marsellus informs Butch that they are even, as long as he tells no one about the rape and departs Los Angeles forever. Butch picks up Fabienne on Zed's chopper.
+			</p>
+		</div>
+		<div class="paralax3">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 5:</h1>
+			<br>
+			<p>Earlier, after Vincent and Jules have executed Brett in his apartment, another man bursts out of the bathroom and shoots at them wildly, missing every time; Jules and Vincent kill him. Jules professes their survival was a miracle, which Vincent disputes. As Jules drives, Vincent accidentally shoots Brett's associate Marvin in the head. They hide the car at the home of Jules' friend Jimmie, who demands they deal with the problem before his wife comes home. Marsellus sends his cleaner, Winston Wolfe, who directs Jules and Vincent to clean the car, hide the body in the trunk, dispose of their bloody clothes, and take the car to a junk yard.</p>
+		</div>
+		<div class="paralax3">
+			<div class="paraOut">
+			</div>
+		</div>
+		<div class="bChild">
+			<h1>Act 6:</h1>
+			<br>
+			<p>
+			At a diner, Jules tells Vincent that he plans to retire from his life of crime, convinced that their "miraculous" survival at the apartment was a sign. While Vincent is in the bathroom, a couple, Pumpkin and Honey Bunny, hold up the restaurant. Jules overpowers Pumpkin and holds him at gunpoint; Honey Bunny becomes hysterical and trains her gun on him. Vincent returns with his gun aimed at her, creating a Mexican standoff. Jules recites the biblical passage, expresses ambivalence about his life of crime, and allows the robbers to take his cash and leave. Jules and Vincent leave the diner with the briefcase.</p>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer>
+			Designed by Wayne Wilson, 2019
+	</footer>
+</body>
+</html>

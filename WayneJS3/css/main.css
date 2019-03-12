@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+h1{
+  font-size: 18pt;
+  text-align: center;
+}
+h3{
+  font-size: 14pt;
+  text-align: center;
+}
+p{
+  padding: 5px;
+}
+#content{
+  height: 100vh;
+  width: 100vw;
+  border-right: solid black 10px;
+  /* position: relative; */
+  /* background-color: rgb(55, 172, 198); */
+  background-image: url("../images/guy.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "head head head"
+  "bod bod bod"
+  "foot foot foot"
+}
+
+#head{
+  grid-area: head;
+  width: 1300px;
+  background-image: url("../images/code.jpg");
+  background-position: static;
+  border-bottom: solid white 2px;
+  position: absolute;
+}
+#bod{
+  grid-area: bod;
+  width: auto;
+  height: auto;
+}
+#stuff{
+  height: 60px;
+  width: 800px;
+  color: black;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 100px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: scroll;
+  left: 1000px;
+}
+#foot{
+  grid-area: foot;
+  width: 1300px;
+  background-color: black;
+  text-align: center;
+  overflow: scroll;
+  color: white;
+  border-top: white solid 5px;
+  position: relative;
+}
+button{
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+}
+nav{
+  text-align: right;
+  padding-right: 50px;
+  font-size: 18pt;
+  color: white;
+
+}
+.video{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 60px;
+}
+.buttons{
+  text-align: center;
+  padding: 5px;
+}
+#stuff:hover {
+  background-color: rgba(0, 0, 0, .9);
+  color: white;
+}
+iframe{
+  text-align: center;
+}

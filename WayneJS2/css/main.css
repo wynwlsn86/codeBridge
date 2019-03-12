@@ -1,0 +1,360 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+article{
+	font-family: sans-serif;
+}
+.content{
+	width: 100vw;
+	height: 100vh;
+	/* background-color: blue; */
+	background-image: url("../images/thewall.jpg");
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+.header{
+	background-image: url("../images/logo.jpg");
+	background-size: fill;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: black;
+	width: 100vw;
+	/* height: 100px;
+	width: 100vw;
+	grid-area: header; */
+}
+.nav{
+	background-color: #8c6d1e;
+	grid-area: nav;
+	margin-right: 5px;
+	border-radius: 10px;
+	display: block;
+	position: fixed;
+}
+li{
+	padding: 25px 5px;
+}
+a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Cinzel Decorative', cursive;
+}
+li:hover {
+	background-color: black;
+}
+.body{
+	/* background-color: black; */
+	grid-area: body;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.footer{
+	background-color: grey;
+	color: white;
+	text-align: center;
+	grid-area: footer;
+
+}
+
+/* ##################  End Index CSS #####################*/
+.contentAbout{
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	background-image: url("../images/mother.jpg");
+	background-size: cover;
+	background-position: center fixed;
+	background-repeat: no-repeat;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+
+h1{
+	font-size: 30pt;
+	text-align: center;
+	text-decoration: underline;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.bodyAbout{
+	margin: 200px 45px 80px 45px;
+	text-align: justify;
+	display: grid;
+	grid-auto-rows: auto;
+	line-height: 50px;
+	color: black;
+	position: relative;
+}
+.aboutArt{
+		background-color: rgba(255, 255, 255, .8);
+		box-shadow: 3px 8px rgba(0, 0, 0, 0.3);
+		padding: 15px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		font-size: 20px;
+}
+/* ###################### END ABOUT CSS##################### */
+.contentCast{
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	background-image: url("../images/winter.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+.bodyCast{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.aboutCast{
+	height: 1000px;
+	width: 300px;
+	font-size: 20px;
+	margin-left: 100px;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	margin-right: 100px;
+	display: block;
+	justify-content: center;
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: justify;
+	border-radius: 5px;
+
+}
+img{
+	padding-left: 400px;
+	height: 240px;
+	width: 200px;
+}
+#family{
+	text-decoration: none;
+	text-align: center;
+}
+/* #################### End Family CSS################ */
+.contentAbout{
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	background-image: url("../images/mother.jpg");
+	background-size: cover;
+	background-position: center fixed;
+	background-repeat: no-repeat;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+
+h1{
+	font-size: 40pt;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.bodyAbout{
+	margin: 200px 45px 80px 45px;
+	text-align: justify;
+	display: grid;
+	grid-auto-rows: auto;
+	line-height: 50px;
+	position: relative;
+	color: black;
+}
+.aboutArt{
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow: 3px 8px rgba(0, 0, 0, 0.3);
+		padding: 15px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		font-size: 20px;
+}
+/* ###################### END ABOUT CSS##################### */
+.contentCast2{
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	background-image: url("../images/starkFamily.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+.bodyCast2{
+	display: block;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.aboutCast{
+	height: 450px;
+	width: 800px;
+	overflow: scroll;
+	font-size: 20px;
+	margin-left: 90px;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: justify;
+	border-radius: 5px;
+
+}
+img{
+	padding-left: 100px;
+	height: 240px;
+	width: 200px;
+}
+#family{
+	text-decoration: none;
+	text-align: center;
+}
+/* ###################### End Cast CSS ################## */
+.contentCast3{
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	background-image: url("../images/starkFamily.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 23% 73% 4%;
+	grid-template-areas:
+		"header header"
+		"nav body"
+		"footer footer";
+}
+.bodyCast3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.aboutFamily{
+	height: 1000px;
+	width: 500px;
+	overflow: scroll;
+	font-size: 20px;
+	margin-left: 30px;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.9);
+	text-align: justify;
+	border-radius: 5px;
+}
+img{
+	padding-left: 150px;
+	height: 240px;
+	width: 200px;
+}
+#family{
+	text-decoration: none;
+	text-align: center;
+}
+.button{
+	height:100px;
+	width: 100px;
+	margin-top: 350px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #a38920;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+button:hover {
+		animation: grow .5s ease-in-out infinite;
+}
+.gallery{
+	/* height: 500px;
+	width: 500px; */
+	margin-top: 200px;
+	margin-bottom: 50px;
+	color: white;
+}
+.slide{
+	height: 340px;
+	width: 550px;
+	padding: 40px;
+}
+
+@keyframes grow{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+#modal{
+	height: 100%;
+	width: 100%;
+	/* background-color: rgba(	163, 137, 32, 0.4); */
+	display: none;
+	position: absolute;
+	color: white;
+	line-height: 1;
+	padding: 15px 15px;
+}
+#modalB{
+	height: 50px;
+	width: 85px;
+	margin-left: 500px;
+	border-radius: 15px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.modalC{
+	height: 200px;
+	width: 300px;
+	margin: auto auto;
+	margin-top: 15px;
+	padding: 15px 10px;
+	background-color: black;
+	border-radius: 15px;
+	border: solid rgb(163, 137, 32) 2px;
+
+}
+.email{
+	margin-left: 80px;
+}

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News SC2</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../css/main.css"> -->
+  <style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    li{
+    	list-style: none;
+    	text-align: center;
+    	padding: 20px;
+    	max-height: 1em;
+    	overflow: hidden;
+    	font-family: 'Share Tech Mono', monospace;
+
+    }
+    p{
+    	font-family: 'Share Tech Mono', monospace;
+    	text-align: left;
+    }
+    h1{
+    	font-family: 'Share Tech Mono', monospace;
+    	font-weight: 400;
+    }
+    h3{
+    	margin-top: 30px;
+    }
+    li:hover{
+    	color: blue;
+    	text-decoration: underline blue;
+    	border-bottom: blue solid 2px;
+    	transition: all 700ms;
+    	cursor: pointer;
+    }
+    .dropdDown:hover {
+    	max-height: 200%;
+    	transition: max-height 5000 ease-in-out;
+    }
+    .sub:hover {
+    	background-color: rgb(30, 166, 185);
+    	border: black solid 1px;
+    	border-radius: 8px;
+    	margin-top: 10px;
+    }
+    a{
+    	text-decoration: none;
+    	color: white;
+    }
+    a:hover{
+    	color: blue;
+    	transition: all 700ms;
+    	cursor: pointer;
+    }
+    .main{
+    	width: 100%;
+    	height: 100vh;
+    	background-image: url("../media/pvzBg.jpg");
+    	background-size: cover;
+    	display: grid;
+    	grid-template-columns: 13% 87%;
+    	grid-template-rows: 100px 9fr .5fr;
+    	grid-template-areas:
+    		"head content"
+    		"nav content"
+    		"foot1 foot"
+    }
+    .head{
+    	grid-area: head;
+    	background
+    	background-size: cover;
+    	background-position: center;
+    	/* position: absolute; */
+    }
+    .nav{
+    	grid-area: nav;
+    	color: white;
+    	background-color: black;
+    	border-right: white solid 1px;
+    }
+    .content{
+    	grid-area: content;
+    	overflow: scroll;
+    }
+    .foot1{
+    	height: 75px;
+    	grid-area: foot1;
+    	background-color: black;
+    }
+    .foot{
+    	grid-area: foot;
+    	background-color: black;
+    	border-top: solid white 1px;
+    	text-align: center;
+    	color: white;
+    }
+    .blizzard{
+    	height: 70px;
+    	width: 210px;
+    	position: relative;
+    	padding: 5px;
+    }
+    #logo{
+    	height: 130px;
+    	/* width: 152px; */
+    	width: 99%;
+    	/* object-fit: cover; */
+    	border-right: solid white 1px;
+    }
+    #pause{
+    	animation: blink 1s ease-in-out infinite;
+    }
+    @keyframes blink {
+    	50%{
+    		background-color: rgb(30, 166, 185);
+    	}
+    	100%{
+    		background-color: black;
+    	}
+    }
+
+    /* ######Main Layout########## */
+    .cine{
+    	height: 100vh;
+    	width: 100vw;
+    	background-color: black;
+    }
+    #cinematic {
+    	position: fixed;
+    	height: 100vh;
+    	width: 100vw;
+    	background-size: cover;
+    	/* background-position: center; */
+    	margin: 0;
+    	/* top: -130px;
+    	left: -260px; */
+    	}
+    .buttonContainer{
+      position: absolute;
+    	display: flex;
+    	justify-content: flex-end;
+      bottom: 0;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    	.button {
+      width: 200px;
+      font-size: 18px;
+    	margin-left: 10px;
+      padding: 10px;
+      border: none;
+      background: rgba(9, 9, 9, 0.59);
+      color: #fff;
+      cursor: pointer;
+    }
+    .button:hover {
+    	background-color: blue;
+    	transition: all 700ms;
+    }
+
+    /* ##############End Landing Page######### */
+
+    .articlePics{
+    	float: left;
+    	margin-right: 10px;
+    }
+    .bold{
+    	font-weight: bold;
+    	font-size: 16pt;
+    }
+    .newsArticles{
+    	text-align: justify;
+    }
+
+    #firstNews{
+    	height: 340px;
+    	text-align: center;
+    	font-size: 16pt;
+    }
+    .news{
+    	height: 200px;
+    	width: 75%;
+    	background-image: linear-gradient(to top, grey , white, grey);
+    	/* filter: blur(10px);
+    	-webkit-filter: blur(10px); */
+    	transition: all 800ms;
+    	border: solid white 2px;
+    	margin: 50px auto 100px auto;
+    	border-radius: 8px;
+    	padding: 30px 40px;
+    	text-align: justify;
+
+    }
+    #lotvLogo{
+    	margin-left: 200px;
+    	position: relative;
+    	opacity: 0;
+    }
+    .news:hover {
+    	filter: blur(0px);
+    }
+    	/* ##########End of News CSS############ */
+    	.mainRaces{
+    		width: 100vw;
+    		height: 100vh;
+    		background-image: url("../media/pvzBg2.jpg");
+    		background-size: cover;
+    		display: grid;
+    		/* background-color: black; */
+    		grid-template-columns: 13% 87%;
+    		grid-template-rows: 100px 9fr .5fr;
+    		grid-template-areas:
+    			"head content"
+    			"nav content"
+    			"foot1 foot"
+    	}
+    	#sc2Logo{
+    		position: static;
+    		margin-left: 300px;
+    		opacity: 0;
+    	}
+    	#raceHeading{
+    		color: white;
+    		text-decoration: none;
+    		font-size: 40pt;
+    		margin-left: 280px;
+    		background: rgba(9, 9, 9, .6);
+    		border-radius: 5px;
+    		padding: 15px;
+    	}
+    	.slideShow{
+    		height: auto;
+    		width: 80%;
+    		transition: all 800ms;
+    		border-radius: 8px;
+    	}
+    	.slideShow:hover {
+    		filter: blur(0px);
+    	}
+    	.icons{
+    		margin-left: 50px;
+
+    	}
+    	.icons:hover {
+    		animation: right .5s ease-in-out forwards;
+    	}
+    	.buttonP {
+    	height: 100px;
+    	width: 200px;
+    	font-size: 18px;
+    	/* margin-left: 50px; */
+    	/* padding: 10px; */
+    	border: none;
+    	background: rgba(9, 9, 9, 1);
+    	color: #fff;
+    	cursor: pointer;
+    	border-top-left-radius: 300px;
+    	border-bottom-left-radius: 300px;
+    	margin-top: 80px;
+    	}
+    	.buttonP:hover{
+    		background-color: blue;
+    		transition: all 700ms;
+    	}
+    	.buttonN {
+    	height: 100px;
+    	width: 200px;
+    	font-size: 18px;
+    	margin-left: 50px;
+    	/* padding: 10px; */
+    	border: none;
+    	background: rgba(9, 9, 9, 1);
+    	color: #fff;
+    	cursor: pointer;
+    	border-top-right-radius: 300px;
+    	border-bottom-right-radius: 300px;
+    	margin-top: 80px;
+    	border: none;
+    	}
+    	.buttonN:hover {
+    		background-color: blue;
+    		transition: all 700ms;
+    	}
+    	#imageArray{
+    		display: flex;
+    		margin-left: 170px;
+    	}
+
+    /* #########End Races CSS############### */
+
+    .parentUnits{
+    	height: 100%;
+    	width: 100%;
+    	display: flex;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    }
+    #allUnits, #allStats{
+    	height: 600px;
+    	width: 40%;
+    	background-image: linear-gradient(to top, grey , white, grey);
+    	/* filter: blur(10px);
+    	-webkit-filter: blur(10px); */
+    	transition: all 800ms;
+    	border: solid white 2px;
+    	margin: 50px auto 100px auto;
+    	border-radius: 8px;
+    	padding: 30px 40px;
+    	text-align: justify;
+    }
+    #allStats{
+    	height: 780px;
+    	font-size: 20pt;
+    	transition: all 700ms;
+    	display: inline-grid;
+    	justify-content: center;
+    }
+    #allUnits{
+    	height: 350px;
+    	width: 30%;
+    	margin-top: 100px;
+    	display: grid;
+    	grid-template-columns: 200px 200px;
+    	grid-template-rows: 50px 100px 100px 100px;
+    	justify-content: center;
+    	grid-template-areas:
+    	"center center"
+    	"one two"
+    	"three four"
+    	"five six"
+    }
+    .units{
+    	color: white;
+    	background-color: black;
+    	margin: 10px;
+    	text-align: center;
+    	border-radius: 5px;
+    }
+    .units:hover {
+    	background-color: blue;
+    	transition: all 700ms;
+    	cursor: pointer;
+    }
+    #previous:hover {
+    	animation: left .5s ease-in-out forwards;
+    }
+    @keyframes left{
+    	0%{
+    		transform: scale(1);
+    	}
+    	100%{
+    		transform: scale(1.1);
+    	}
+    }
+    #next:hover {
+    	animation: right .5s ease-in-out forwards;
+    }
+    @keyframes right{
+    	0%{
+    		transform: scale(1);
+    	}
+    	100%{
+    		transform: scale(1.1);
+    	}
+    }
+    /* ###################End Main Layout for Terran/Protoss/Zerg######### */
+    .mainZerg{
+    	width: 100vw;
+    	height: 100vh;
+    	background-image: url("../media/zergBG.jpg");
+    	background-size: cover;
+    	display: grid;
+    	grid-template-columns: 13% 87%;
+    	grid-template-rows: 100px 9fr .5fr;
+    	grid-template-areas:
+    		"head content"
+    		"nav content"
+    		"foot1 foot"
+    }
+
+    /* ###########End Zerg Layout################## */
+    .mainProtoss{
+    	width: 100vw;
+    	height: 100vh;
+    	background-image: url("../media/protossBG.jpg");
+    	background-size: cover;
+    	background-position: bottom;
+    	display: grid;
+    	grid-template-columns: 13% 87%;
+    	grid-template-rows: 100px 9fr .5fr;
+    	grid-template-areas:
+    		"head content"
+    		"nav content"
+    		"foot1 foot"
+    }
+    /* ###############End Protoss Layout#################### */
+    .mainTerran {
+    	width: 100vw;
+    	height: 100vh;
+    	background-image: url("../media/terranBG.jpg");
+    	background-size: cover;
+    	background-position: bottom;
+    	display: grid;
+    	grid-template-columns: 13% 87%;
+    	grid-template-rows: 100px 9fr .5fr;
+    	grid-template-areas:
+    		"head content"
+    		"nav content"
+    		"foot1 foot"
+    }
+    /* ##################End Terran Layout##################### */
+    .mainAbout {
+    	width: 100vw;
+    	height: 100vh;
+    	background-image: url("../media/tvzBG.jpg");
+    	background-size: cover;
+    	background-position: bottom;
+    	display: grid;
+    	grid-template-columns: 13% 87%;
+    	grid-template-rows: 100px 9fr .5fr;
+    	grid-template-areas:
+    		"head content"
+    		"nav content"
+    		"foot1 foot"
+    }
+    #names{
+    	/* text-align: center;; */
+    }
+    #pic{
+    	border: solid rgb(98, 106, 121) 3px;
+    	border-radius: 2px;
+    }
+    .firstImage{
+    	margin-left: 20%;
+    	text-align: center;
+    }
+    .center{
+    	/* text-align: center; */
+    	grid-area: center;
+    }
+    #one{
+    	grid-area: one;
+    }
+    #two{
+    	grid-area: two;
+    }
+    #three{
+    	grid-area: three;
+    }
+    #four{
+    	grid-area: four;
+    }
+    #five{
+    	grid-area: five;
+    }
+    #six{
+    	grid-area: six;
+    }
+
+
+
+
+
+
+    #modal{
+    	height: 100%;
+    	width: 100%;
+    	/* background-color: rgba(	163, 137, 32, 0.4); */
+    	display: block;
+    	position: absolute;
+    	color: white;
+    	line-height: 1;
+    	padding: 15px 15px;
+    }
+    #modalB{
+    	height: 50px;
+    	width: 85px;
+    	margin-left: 500px;
+    	border-radius: 15px;
+    	display: flex;
+    	align-content: center;
+    	justify-content: center;
+    }
+    .modalC{
+    	height: 800px;
+    	width: 900px;
+			position: relative;
+    	margin: auto auto;
+    	margin-top: 15px;
+    	padding: 15px 10px;
+    	background-color: black;
+    	border-radius: 15px;
+    	border: solid rgb(163, 137, 32) 2px;
+
+  </style>
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Inconsolata:700|Share+Tech+Mono|Source+Code+Pro:700|VT323" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<header class="head"><a href="https://starcraft2.com/en-us/">
+			<video autoplay muted loop id="logo">
+  			<source src="../media/logo.mp4" type="video/mp4">
+			</video>
+		</a></header>
+		<nav class="nav" id="nav">
+			<ul>
+				<a href="news.html"><li><h1>News</h1></li></a>
+				<a href="../index.html"></href><li><h1>Cinematic</h1></li></a>
+					<a href="races.html"><li class="dropdDown"><h1>Races</h1>
+						<ul>
+							<a href="../pages/terran.html"><li class="sub">Terran</li></a>
+							<a href="../pages/zerg.html"><li class="sub">Zerg</li></a>
+							<a href="../pages/protoss.html"><li class="sub">Protoss</li></a>
+						</ul>
+					</li></a>
+				<a href="about.html"><li><h1>About</h1></li></a>
+			</ul>
+		</nav>
+		<div class="content">
+			<img src="../media/lotvLogo.png" alt="Legacy of the Void Logo" id="lotvLogo" onload="proPhase()">
+			<div class="news" class="newsArticles">
+						<a href="https://kotaku.com/starcraft-iis-current-world-champion-is-the-player-to-b-1833000433"><img class="articlePics" src="../media/article1.jpg" ></a>
+
+						<div id="modal">
+			        <div class="modalC">
+			          <h1>Sign up for all the latest news!</h1>
+			          <br>
+			          <br>
+			          <input type="email" placeholder="Enter your Email" class="email"></input>
+			          <button id="modalC" onclick="closeModal()">Submit</button>
+			        </div>
+			      </div>
+
+
+
+
+
+						<p>
+						<span class="bold">The Intel Extreme Masters Season XIII StarCraft II </span>started this week with 24 teams and will soon be down to 12 as the playoff stage gets underway this weekend. The $400,000 prize pool event is taking place in Poland where all of the best players will be looking to secure their spot at this year’s world championship with a first-place win.<br>
+						Last year’s champion, Joona “Serral” Sotala, came out on top in his group, although it was his closest rival, Kim “Stats” Dae Yeob, who managed to make it into the playoff round without dropping a single game. If the two meet again during the bracket stage, which seems likely, fans could end up getting rewarded with a sequel to last November’s glorious six-game showdown between the two pros.
+						</p>
+			</div>
+			<div class="news">
+				<a href="https://www.player.one/starcraft-2-patch-notes-update-4-8-3-multiple-bugs-124496"><img class="articlePics" src="../media/article2.jpg" ></a>
+					<p>
+					<span class="bold">Starcraft 2 4.8.3 Patch Notes</span> <br />
+					The latest patch for Starcraft 2 is now available. While the patch doesn’t add any major new content, it does fix a number of bugs in both the single-player campaign and multiplayer. There is also a new Twitch Prime offer teased for later this month.<br />
+					Queens can now properly spawn a Creep Tumor on ramps in certain Heart of the Swarm campaign missions, and Co-op Missions.<br />
+					Fixed an issue where toggling on mouse drag scroll could cause the cursor to appear in the middle of the screen.
+				</p>
+			</div>
+			<div class="news">
+				<a href="https://screenrant.com/soo-wins-iem-katowice-ends-kong-line-curse/"><img class="articlePics" src="../media/article3.jpg" ></a>
+				<p>
+				<span class="bold">One of StarCraft 2's best players</span> has finally ended a curse that has spanned six years and seven premier tournament finals appearances. Eo "soO" Yoon Soon finally won a premier tournament by finishing first at IEM Katowice 2019, defeating Kim "Stats" Dae Yeob to take home $150,000 and lift a gigantic weight off his shoulders.<br>
+				There's never been a player quite like soO, though, whose incredible consistency in appearing in seven finals prior to Katowice - including finishing second in every single Korean GSL premier league event in 2014 - made him both one of the best and one of the most disappointing players in all of StarCraft 2.
+				</p>
+			</div>
+		</div>
+		<div class="foot1">
+			<a href="https://www.blizzard.com/en-us/"><img src="../media/blizzard.png" class="blizzard"></a>
+		</div>
+		<footer class="foot">
+			<br>
+			©2019 BLIZZARD ENTERTAINMENT, 		INC. ALL RIGHTS RESERVED.
+			<br />
+			All trademarks referenced herein are the properties of their respective owners.</footer>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+<script src="../js/main.js"></script>
+</html>

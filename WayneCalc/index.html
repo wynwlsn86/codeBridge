@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<form name="calc">
+	<div class="calc">
+				<div id="value">
+					<input type="text" id="input" value="0" size='12'></input>
+				</div>
+				<input type="button" class="child" id="one" onclick="calc.input.value += '1'"></input>
+				<input type="button" class="child" id="two" onclick="calc.input.value += '2'"></input>
+				<input type="button" class="child" id="three" onclick="calc.input.value += '3'"></input>
+				<input type="button" class="child" id="four" onclick="calc.input.value += '4'"></input>
+				<input type="button" class="child" id="five" onclick="calc.input.value += '5'"></input>
+				<input type="button" class="child" id="six" onclick="calc.input.value += '6'"></input>
+				<input type="button" class="child" id="seven" onclick="calc.input.value += '7'"></input>
+				<input type="button" class="child" id="eight" onclick="calc.input.value += '8'"></input>
+				<input type="button" class="child" id="nine" onclick="calc.input.value += '9'"></input>
+				<input type="button" class="child" id="zip" onclick="calc.input.value += '0'"></input>
+				<input type="button" class="child" id="sum" onclick="calc.input.value += '+'"></input>
+				<input type="button" class="child" id="minus" onclick="calc.input.value += '-'"></button>
+				<input type="button" class="child" id="mul" onclick="calc.input.value += '*'"></button>
+				<input type="button" class="child" id="div" onclick="calc.input.value += '/'"></input>
+				<input type="button" class="child" id="mod" onclick="calc.input.value += '%'"></input>
+				<input type="button" class="child" id="avg" onclick="average()"></button>
+				<input type="button" class="child" id="equal" onclick="calc.input.value = eval(calc.input.value)"></button>
+				<input type="button" class="child" id="clear" onclick="calc.input.value = '0'"></button>
+			</div>
+		</form>
+
+<script type="text/javascript">
+	
+ 
+	function average() {
+		let string = document.getElementById('input').value;
+		console.log(string);
+		let total = 0;
+		let math = string.split("");
+		console.log(math);
+		let sleep = 0;
+		for(let i = 0; i < math.length; i++){
+			if(math[i]>0){
+			total += parseInt(math[i]);
+			}
+		}	
+			sleep = total/(math.length -1) ;
+			calc.input.value = sleep;
+			console.log(sleep);
+	}
+
+
+
+
+</script>
+
+
+</body>
+</html>

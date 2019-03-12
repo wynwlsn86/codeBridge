@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zerg SC2</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Inconsolata:700|Share+Tech+Mono|Source+Code+Pro:700|VT323" rel="stylesheet">
+</head>
+<body>
+	<div class="mainZerg">
+		<header class="head"><a href="https://starcraft2.com/en-us/">
+			<video autoplay muted loop id="logo">
+  			<source src="../media/logo.mp4" type="video/mp4">
+			</video>
+		</a></header>
+		<nav class="nav" id="nav">
+			<ul>
+				<a href="news.html"><li><h1>News</h1></li></a>
+				<a href="../index.html"></href><li><h1>Cinematic</h1></li></a>
+					<a href="races.html"><li class="dropdDown"><h1>Races</h1>
+						<ul>
+							<a href="../pages/terran.html"><li class="sub">Terran</li></a>
+							<a href="../pages/zerg.html"><li class="sub">Zerg</li></a>
+							<a href="../pages/protoss.html"><li class="sub">Protoss</li></a>
+						</ul>
+					</li></a>
+				<a href="about.html"><li><h1>About</h1></li></a>
+			</ul>
+		</nav>
+		<div class="content">
+			<img src="../media/broodWarLogo.png" alt="Legacy of the Void Logo" id="lotvLogo" onload="proPhase()">
+
+
+			<div class="parentUnits">
+
+				<div class="childUnits" id="allUnits">
+					<h1 class="center">
+						Choose a unit:
+					</h1>
+					<br />
+					<button class="units" id="one" onclick="displayDrone()"><h2>Drone</h2></button>
+					<button class="units" id="two" onclick="displayBroodLord()"><h2>Brood Lord</h2></button>
+					<button class="units" id="three" onclick="displayRoach()"><h2>Roach</h2></button>
+					<button class="units" id="four" onclick="displayZergling()"><h2>Zergling</h2></button>
+					<button class="units" id="five" onclick="displayBanling()"><h2>Baneling</h2></button>
+					<button class="units" id="six" onclick="displayHydralisk()"><h2>Hydralisk</h2></button>
+				</div>
+
+				<div class="childUnits" id="allStats">
+					<h1><p id="names"></p></h1>
+					<img src= "../media/zergIcon.png" id="pic" class="firstImage"/>
+					<p id="descript">
+						The Zerg make no use of technology to create their weapons, armor, or starships. Instead, these functions are efficiently fulfilled through biological adaptation and planned mutation of the Zerg strains. Even Zerg buildings are in fact specialized organs within the living, growing organism of a Zerg nest.</p>
+					<p id="cost"></p>
+					<p id="hp"></p>
+					<p id="range"></p>
+					<p id="damage"></p>
+					<p id="special"></p>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="foot1">
+			<a href="https://www.blizzard.com/en-us/"><img src="../media/blizzard.png" class="blizzard"></a>
+		</div>
+		<footer class="foot">
+			<br>
+			©2019 BLIZZARD ENTERTAINMENT, 		INC. ALL RIGHTS RESERVED.
+			<br />
+			All trademarks referenced herein are the properties of their respective owners.</footer>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+<script src="../js/main.js"></script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Terran SC2</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Inconsolata:700|Share+Tech+Mono|Source+Code+Pro:700|VT323" rel="stylesheet">
+</head>
+<body>
+	<div class="mainTerran">
+		<header class="head"><a href="https://starcraft2.com/en-us/">
+			<video autoplay muted loop id="logo">
+  			<source src="../media/logo.mp4" type="video/mp4">
+			</video>
+		</a></header>
+		<nav class="nav" id="nav">
+			<ul>
+				<a href="news.html"><li><h1>News</h1></li></a>
+				<a href="../index.html"></href><li><h1>Cinematic</h1></li></a>
+					<a href="races.html"><li class="dropdDown"><h1>Races</h1>
+						<ul>
+							<a href="../pages/terran.html"><li class="sub">Terran</li></a>
+							<a href="../pages/zerg.html"><li class="sub">Zerg</li></a>
+							<a href="../pages/protoss.html"><li class="sub">Protoss</li></a>
+						</ul>
+					</li></a>
+				<a href="about.html"><li><h1>About</h1></li></a>
+			</ul>
+		</nav>
+		<div class="content">
+			<img src="../media/broodWarLogo.png" alt="Legacy of the Void Logo" id="lotvLogo" onload="proPhase()">
+
+
+			<div class="parentUnits">
+
+				<div class="childUnits" id="allUnits">
+					<h1 class="center">
+						Choose a unit:
+					</h1>
+					<button class="units" id="one" onclick="displayScv()"><h2>SCV</h2></button>
+					<button class="units" id="two" onclick="displayMarine()"><h2>Marine</h2></button>
+					<button class="units" id="three" onclick="displayMarauder()"><h2>Marauder</h2></button>
+					<button class="units" id="four" onclick="displayMedivac()"><h2>Medivac</h2></button>
+					<button class="units" id="five" onclick="displayBattleCruiser()"><h2>Battle Cruiser</h2></button>
+					<button class="units" id="six" onclick="displaySiegeTanks()"><h2>Siege Tank</h2></button>
+				</div>
+
+				<div class="childUnits" id="allStats">
+					<div>
+						<h1><p id="names"></p></h1>
+						<span class="firstImage"><img src= "../media/terranIcon.png" id="pic"/></span>
+						<p id="descript">
+							Forced to adapt to the harsh existence on the mostly lifeless worlds of the sector, the Terrans are masters of survival. With neither the advanced technology of the Protoss nor the natural prowess of the Zerg to rely on, the Terran military forces consist of a varied mix of units. From basic but effective infantry like the Marines to heavily armed Battlecruisers, Terran units rely on solid armor, and strength in numbers to hold the line.</p>
+						<p id="cost"></p>
+						<p id="hp"></p>
+						<p id="range"></p>
+						<p id="damage"></p>
+						<p id="special"></p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="foot1">
+			<a href="https://www.blizzard.com/en-us/"><img src="../media/blizzard.png" class="blizzard"></a>
+		</div>
+		<footer class="foot">
+			<br>
+			©2019 BLIZZARD ENTERTAINMENT, 		INC. ALL RIGHTS RESERVED.
+			<br />
+			All trademarks referenced herein are the properties of their respective owners.</footer>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+<script src="../js/main.js"></script>
+</html>

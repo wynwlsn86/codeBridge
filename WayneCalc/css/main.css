@@ -1,0 +1,271 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.calc{
+	width: 500px;
+	height: 630px;
+	border-radius: 15px;
+	margin-top: 20px;
+	padding-top: 5px;
+	margin-left: 30px;
+	position: relative;
+	background-color: #86f475;
+	border: solid black 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		"value value avg clear"
+		"one two three sum"
+		"four five six minus"
+		"seven eight nine mul"
+		"zip mod div equal";
+}
+.child{
+	background-color: green;
+	border: black 1px solid;
+	margin: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#one:hover {
+	border-width: 4px;
+	border-color: #157019;
+}
+#two:hover {
+	border-width: 4px;
+	border-color: #96071c;
+}
+#three:hover {
+	border-width: 4px;
+	border-color: #c95904;
+}
+#sum:hover {
+	border-width: 4px;
+	border-color: #997515;
+}
+#four:hover {
+	border-width: 4px;
+	border-color: #e814cf;
+}
+#five:hover {
+	border-width: 4px;
+	border-color: #b44fd6;
+}
+#six:hover {
+	border-width: 4px;
+	border-color: #e27fd7;
+}
+#minus:hover {
+	border-width: 4px;
+	border-color: #e29e41;
+}
+#seven:hover {
+	border-width: 4px;
+	border-color: #e814cf;
+}
+#eight:hover {
+	border-width: 4px;
+	border-color: #96071c;
+}
+#nine:hover {
+	border-width: 4px;
+	border-color: #e814cf;
+}
+#mul:hover {
+	border-width: 4px;
+	border-color: #157019;
+}
+#zip:hover {
+	border-width: 4px;
+	border-color: #49dced;
+}
+#mod:hover {
+	border-width: 4px;
+	border-color: #c95904;
+}
+#div:hover {
+	border-width: 4px;
+	border-color: #997515;
+}
+#equal:hover {
+	border-width: 4px;
+	border-color: #e814cf;
+}
+#avg:hover {
+	border-width: 4px;
+	border-color: black;
+}
+#clear:hover {
+	border-width: 4px;
+	border-color: black;
+}
+#input{
+	text-align: right;
+	border: black solid 2px;
+	height: 70%; 
+	width: 80%
+	padding-right: 5px;
+	margin-top: 15px;
+	margin-right: 20px;
+	width: 250px; 
+	font-size: 20pt;
+	border-radius: 15px;
+}
+#value{
+	grid-area: value;
+}
+#one{
+	grid-area: one;
+	background-size: cover;
+	align-content: center center;
+	background-image: url("../images/one.gif");
+}
+#two{
+	grid-area: two;
+	background-size: cover;
+	background-color: red;
+	align-content: center center;
+	background-image: url("../images/two.gif");
+}
+#three{
+	grid-area: three;
+	background-size: cover;
+	background-color: orange;
+	align-content: center center;
+	background-image: url("../images/three.gif");
+}
+#four{
+	grid-area: four;
+	background-size: cover;
+	align-content: center center;
+	background-image: url("../images/four.gif");
+}
+#five{
+	grid-area: five;
+	background-size: cover;
+	background-color: purple;
+	align-content: center center;
+	background-image: url("../images/five.gif");
+}
+#six{
+	grid-area: six;
+	background-size: 130px 110px;
+	background-color: pink;
+	align-content: center center;
+	background-image: url("../images/six.gif");
+}
+#seven{
+	grid-area: seven;
+	background-size: cover;
+	background-color: yellow;
+	align-content: center center;
+	background-image: url("../images/seven.gif");
+}
+#eight{
+	grid-area: eight;
+	background-size: cover;
+	background-color: #bc42f4;
+	align-content: center center;
+	background-image: url("../images/eight.gif");
+}
+#nine{
+	grid-area: nine;
+	background-size: cover;
+	background-color: #bc42f4;
+	align-content: center center;
+	background-image: url("../images/nine.gif");
+}
+#sum{
+	grid-area: sum;
+	background-size: 108px 105px;
+	background-repeat: no-repeat;
+	background-color: white;
+	align-content: center;
+	background-image: url("../images/sum.gif");
+}
+#zip{
+	grid-area: zip;
+	background-size: cover;
+	background-color: #bc42f4;
+	align-content: center center;
+	background-image: url("../images/zero.gif");
+}
+#minus{
+	grid-area: minus;
+	background-size: cover;
+	align-content: center center;
+	background-image: url("../images/minus.gif");
+}
+#mul{
+	grid-area: mul;
+	background-size: cover;
+	background-color: blue;
+	align-content: center center;
+	background-image: url("../images/mul.gif");
+}
+#div{
+	grid-area: div;
+	background-size: cover;
+	background-color: #e86e3e;
+	background-image: url("../images/div.gif");
+}
+#mod{
+	grid-area: mod;
+	background-size: cover;
+	background-color: #e86e3e;
+	background-image: url("../images/rem.gif");
+}
+#avg{
+	grid-area: avg;
+	background-size: 110px 120px;
+	background-repeat: no-repeat;
+	justify-content: left;
+	background-color: white;
+	background-image: url("../images/avg.jpg");
+}
+#clear{
+	grid-area: clear;
+	background-size: cover;
+	background-color: #897e7a;
+	align-content: center center;
+	background-image: url("../images/eraser.gif");
+}
+#equal{
+	grid-area: equal;
+	background-size: 110px 110px;
+	align-content: center;
+	background-image: url("../images/equals.gif");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

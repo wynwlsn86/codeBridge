@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			color: black;
+		}
+		header{
+			width: 100%;
+			position: fixed;
+		}
+		h3{
+			font-family: 'PT Sans', sans-serif;
+			font-weight: bold;
+		}
+		/*Theatre Background*/
+		body{
+			background-image: url("../images/movie.jpg");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: none;
+		}
+		/*Header CSS*/
+		.head{
+			display: flex;
+			background-color: black;
+			width: 100%;
+			height: 50px;
+		}
+		.hChild{
+			background-color: grey;
+			border: solid black;
+			color: white;
+			border-width: 10px;
+			width: 300px;
+			height: 20px;
+			flex: 1;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 20px;
+			animation: pulse 2s ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		@keyframes pulse{
+			0%{
+				font-weight: normal;
+			}
+			20%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			40%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			50%{
+				font-weight: bolder;
+				font-size: 22px;
+			}
+			60%{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			80%{
+				font-weight: bold;
+				font-size: 18px;
+			}
+			100%{
+				font-weight: normal;
+			}
+		}
+		/*End Header CSS*/
+
+		/*Embed Video*/
+		.movieParent{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.trailer{
+			padding-top: 220px;
+		}
+		/*Footer CSS*/
+		footer{
+			background-color: grey;
+			border: black solid 1px;
+			width: 100%;
+			height: 20px;
+			color: white;
+			text-align: center;
+			padding: 5px;
+			margin-top: 180px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<div class="hChild">
+				<a href="../index.html"> 
+					<h3 class="button">Home</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="synopsys.html"> 
+					<h3 class="button">Synopsis</h3>
+				</a>
+			</div>
+			<div class="hChild">
+				<a href="cast.html">
+					<h3 class="button">Cast</h3>
+				</a>
+			</div>	
+			<div class="hChild">
+				<a href="trailer.html"> 
+					<h3 class="button">Trailer</h3>
+				</a>
+			</div>		
+		</div>
+	</header>
+	<div class="movieParent">
+		<div class="trailer">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/s7EdQ4FqbhY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<footer>
+		Designed by Wayne Wilson, 2019
+	</footer>
+</body>
+</html>

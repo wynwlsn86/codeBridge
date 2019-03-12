@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: black;
+		}
+		.cbody{
+			height: 500px;
+			width: 1200px;
+			background-color: brown;
+			display: grid;
+			margin: auto;
+			border-radius: 15px;
+			margin-top: 50px;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas:
+				"digital digital digital"
+				"alarmTime alarmTime AlarmTime"
+				"stop snooze set"
+		}
+		#digital{
+			margin: 0 auto;
+			font-size: 100pt;
+			font-family: 'Orbitron', sans-serif;
+			margin: auto;
+			color: yellow;
+			grid-area: digital;
+		}
+		input{
+			border-radius: 15px;
+			font-size: 80pt;
+			text-align: center;
+		}
+		button{
+			height: 150px;
+			width: 300px;
+			margin-left: 20px;
+			background-color: grey;
+			border-radius: 15px;
+			font-size: 20pt;
+		}
+		#alarmTime{
+			/*height: 100px;
+			width: 75px*/
+			grid-area: alarmTime
+		}
+		#set{
+			grid-area: set;
+			border-radius: 15px;
+			font-size: 10pt;
+		}
+		#snooze{
+			grid-area: snooze;
+		}
+		#set{
+			grid-area: set;
+		}
+		#stop{
+			grid-area: stop;
+		}
+		/*@keyframes alarmB{
+			0%{
+				background-color: yellow;
+			}
+			33%{
+				background-color: red;
+			}
+			66%{
+				background-color: yellow;
+			}
+			100%{
+				background-color: red;
+			}
+		}*/
+		/*.alarmB {
+			animation: pulse;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="cbody">
+		<div class="clock" id="digital"></div>
+		<div id="alarmTime">
+			<input type="text" id="input" placeholder="HH:MM:SS">
+		</div>
+		<div id="set">
+			<button value="set" id="setB" onclick="setAlarm(this)">SET ALARM</button>
+		</div>
+		<div id="stop">
+			<button value="stop" id="stopB" onclick="stopAlarm()">STOP ALARM</button>
+		</div>
+		<div id="snooze">
+			<button value="snooze" id="snoozeB" onclick="snoozeAlarm()">SNOOZE</button>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+
+//########################## Ticking Clock ###############
+	function clockD(){
+		let time = new Date ();
+		// console.log(time);
+		let hours = time.getHours ();
+		// console.log(hours);
+		let minutes = time.getMinutes ();
+		// console.log(minutes);
+		realMinutes = (minutes < 10 ? "0" : "") + minutes;
+		// console.log(realMinutes);
+		let seconds = time.getSeconds ();
+		// console.log(seconds);
+		realSeconds = (seconds < 10 ? "0" : "") + seconds;
+		let amPm = (hours < 12) ? "AM" : "PM";
+		// console.log(amPm);
+
+		let clockDigital = document.getElementById('digital');
+
+		clockDigital = hours + ":" + realMinutes + ":" + realSeconds + " " + amPm;
+		// console.log(clockDigital);
+		document.getElementById('digital').innerText = clockDigital;
+	};
+	clockD();
+
+	let realTime = setInterval(clockD, 1000);
+// ############################################################
+
+
+
+
+// ##################################### Alarm ##################
+
+
+
+  function setAlarm () {
+		let inputTime = document.getElementById('input').value;
+		let aTime = new Date();
+		let hours = aTime.getHours ();
+		console.log(hours);
+		let minutes = aTime.getMinutes ();
+		let seconds = aTime.getSeconds ();
+
+		if (inputTime === (hours + ":" + minutes + ":"+ seconds)){
+			alarmSound();
+		}
+
+		let alarmSet = setInterval(setAlarm, 1000);
+		// let beepTime = new Date(time.getHours, time.getMinutes, time.getSeconds)
+		// console.log(beepTime);
+		// console.log(string);
+		// if(string === hours + ":" + minutes + seconds + amPM)
+  }
+	//
+	let beep = new Audio();
+  beep.src = 'media/beep.mp3';
+	function alarmSound(){
+		beep.play;
+	}
+	// //
+
+	// //
+  function stopAlarm () {
+    beep.pause;
+    beep.currentTime = 0;
+  }
+	// //
+  function snooze() {
+    stopAlarm();
+    setTimeout(alarmSound, 600000)
+
+  }
+  // ##########################################################
+
+
+</script>
+</html>
